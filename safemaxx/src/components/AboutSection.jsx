@@ -23,8 +23,8 @@ const AboutSection = () => {
 
   return (
     <section id="about" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 flex justify-center max-w-4xl">
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -65,24 +65,6 @@ const AboutSection = () => {
                   <div className="text-sm text-gray-600">{stat.label}</div>
                 </motion.div>
               ))}
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="relative"
-          >
-            <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center">
-                <img
-                  src="/src/assets/safemax_image.jpeg"
-                  alt="Cybersecurity Operations"
-                  className="w-[400px] h-[400px]"
-                />
-              </div>
             </div>
           </motion.div>
         </div>
